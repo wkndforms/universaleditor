@@ -615,7 +615,7 @@ text-wrapper input {
   border-radius: 4px;
 }
 
-main .form form .name input {
+main .form form .text-wrapper input {
   border: 5px solid #ccc;
   padding: 8px;
   border-radius: 4px;
