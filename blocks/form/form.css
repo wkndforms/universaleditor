@@ -637,7 +637,7 @@ main .form form .drop-down-wrapper select {
   border: 1px solid #ccc;
   padding: 8px;
   border-radius: 4px;
-  background-color: green; /* Ensure a consistent background */
+  background-color: #ffb6c1; /* Ensure a consistent background */
   /* Adjust arrow appearance as needed */
   -webkit-appearance: none;
   -moz-appearance: none;
