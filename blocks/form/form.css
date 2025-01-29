@@ -620,6 +620,7 @@ main .form form .text-wrapper input {
   padding: 8px;
   border-radius: 4px;
   color: green;
+letter-spacing: 4px;
 }
 main .form form .number-wrapper input {
    letter-spacing: 2px;
