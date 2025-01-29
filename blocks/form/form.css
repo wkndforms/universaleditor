@@ -627,10 +627,8 @@ main .form form .number-wrapper input {
    color: red;
 }
 main .form form .drop-down-wrapper input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-  color: magenta;
+  position: relative;
+  display: inline-block;
 }
 
 
