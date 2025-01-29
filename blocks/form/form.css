@@ -608,7 +608,7 @@ main .form form .horizontal {
     flex-direction: row;
     gap: inherit;
 }
-name input {
+.name input {
     border: 1px solid #ccc;
     padding: 8px;
     border-radius: 4px;
