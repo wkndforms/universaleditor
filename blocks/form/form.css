@@ -633,6 +633,10 @@ main .form form .file-wrapper {
 color: Gray;
 }
 
+main .form form .field-invalid .field-description {
+color: var(--form-error-color);
+font-weight: 700;
+}
 
 main .form form .drop-down-wrapper {
   /* Wrapper styles */
