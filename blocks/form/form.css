@@ -92,19 +92,19 @@ main .form > div:not(:first-child) {
     display: none;
 }
 
-main .form form {
+main .form {
     display: grid;
     grid-template-columns: repeat(var(--form-columns), minmax(0, 1fr));
     gap: var(--form-field-vert-gap) var(--form-field-horz-gap);
 }
 
-main .form form fieldset {
+main .form fieldset {
     border: var(--form-fieldset-border);
     margin: var(--form-fieldset-marign);
     width: 100%;
 }
 
-main .form form fieldset fieldset {
+main .form fieldset fieldset {
     padding: 0;
 }
 
@@ -113,7 +113,7 @@ main .form .field-description {
     font-size: var(--form-font-size-xs);
 }
 
-main .form form .field-invalid .field-description {
+main .form .field-invalid .field-description {
     color: var(--form-error-color);
     font-weight: 700;
 }
@@ -186,34 +186,34 @@ main .form label.required::after {
     padding-inline-start: 5px;
 }
 
-main .form form p,
-main .form form .repeat-wrapper,
-main .form form .field-wrapper {
+main .form p,
+main .form .repeat-wrapper,
+main .form .field-wrapper {
     margin: var(--form-field-gap);
     color: var(--form-label-color);
     grid-column: span 12;
 }
 
-main .form form p {
+main .form p {
     font-size: var(--form-paragraph-font-size);
     font-style: var(--form-paragraph-font-style);
     color: var(--form-paragraph-color);
     margin: var(--form-paragraph-margin);
 }
 
-main .form form .checkbox-wrapper, main .form form .radio-wrapper {
+main .form .checkbox-wrapper, main .form .radio-wrapper {
     display: flex;
     align-items: center;
     margin: 0;
     gap: 8px;
 }
 
-main .form form fieldset.cards.horizontal {
+main .form fieldset.cards.horizontal {
     column-gap: 0;
 }
 
-main .form form fieldset > .radio-wrapper,
-main .form form fieldset > .checkbox-wrapper {
+main .form fieldset > .radio-wrapper,
+main .form fieldset > .checkbox-wrapper {
     margin-left: var(--form-field-gap);
 }
 
@@ -222,8 +222,8 @@ main .form .checkbox-wrapper label {
     flex-basis: calc(100% - 24px);
 }
 
-main .form form fieldset.cards > .radio-wrapper > label,
-main .form form fieldset.cards > .checkbox-wrapper > label {
+main .form fieldset.cards > .radio-wrapper > label,
+main .form fieldset.cards > .checkbox-wrapper > label {
     display: flex;
     gap: 1rem;
     margin: 0 0 1rem;
@@ -233,14 +233,14 @@ main .form form fieldset.cards > .checkbox-wrapper > label {
     align-items: end;
 }
 
-main .form form fieldset.cards.horizontal > .radio-wrapper > label,
-main .form form fieldset.cards.horizontal > .checkbox-wrapper > label
+main .form fieldset.cards.horizontal > .radio-wrapper > label,
+main .form fieldset.cards.horizontal > .checkbox-wrapper > label
 {
     min-width: fit-content;
 }
 
-main .form form fieldset.cards > .radio-wrapper > input:checked ~ label,
-main .form form fieldset.cards > .checkbox-wrapper > input:checked ~ label{
+main .form fieldset.cards > .radio-wrapper > input:checked ~ label,
+main .form fieldset.cards > .checkbox-wrapper > input:checked ~ label{
     border: 1px solid #1c3fca;
     background-color: #F3F6FD;
 }
@@ -281,8 +281,8 @@ main .form button:disabled {
     background-color: var(--form-input-disable-color);
 }
 
-main .form form fieldset.cards > .radio-wrapper > input,
-main .form form fieldset.cards > .checkbox-wrapper > input{
+main .form fieldset.cards > .radio-wrapper > input,
+main .form fieldset.cards > .checkbox-wrapper > input{
     width: 0;
 }
 
@@ -300,24 +300,24 @@ main .file-wrapper .field-dropregion {
 }
 
 /* Repeatable Styling */
-main .form form .repeat-actions {
+main .form .repeat-actions {
     grid-column: span 12;
     order: 2;
 }
 
-main .form form .item-remove,
-main .form form .item-add {
+main .form .item-remove,
+main .form .item-add {
     overflow: unset;
 }
 
-main .form form .item-remove {
+main .form .item-remove {
     justify-self: end;
     grid-column: span 12;
     order: 1;
 }
 
-main .form form div[data-variant="addRemoveButtons"] .item-add,
-main .form form div[data-variant="addRemoveButtons"] .item-remove {
+main .form div[data-variant="addRemoveButtons"] .item-add,
+main .form div[data-variant="addRemoveButtons"] .item-remove {
     display: block;
 }
 
@@ -378,7 +378,7 @@ main .form .button-wrapper button[disabled]:hover {
 }
 
 /** Wizard Styling */
-main .form form .wizard  {
+main .form .wizard  {
   display: grid;
   counter-reset: wizard-step-counter;
   grid-template-columns: minmax(0, 1fr);
@@ -388,24 +388,24 @@ main .form form .wizard  {
   padding: 20px var(--form-wizard-padding);
 }
 
-main .form form .wizard > legend{
+main .form .wizard > legend{
     float: left;
     width: 100%;
 }
 
-main .form form .wizard > .field-description{
+main .form .wizard > .field-description{
   width: 100%;
 }
 
-main .form form .wizard > fieldset > legend{
+main .form .wizard > fieldset > legend{
     display: none;
 }
 
-main .form form .wizard > fieldset:not(.current-wizard-step){
+main .form .wizard > fieldset:not(.current-wizard-step){
     display: none;
 }
 
-main .form form .wizard .wizard-button-wrapper{
+main .form .wizard .wizard-button-wrapper{
     display: flex;
     justify-content: end;
     gap: 50px;
@@ -414,7 +414,7 @@ main .form form .wizard .wizard-button-wrapper{
     grid-column: span 12;
 }
 
-main .form form .wizard .wizard-button-wrapper .field-wrapper{
+main .form .wizard .wizard-button-wrapper .field-wrapper{
     flex: unset;
 }
 
@@ -432,11 +432,11 @@ main .form form .wizard .wizard-button-wrapper .field-wrapper{
     grid-column: span 12;
 }
 
-main .form form .wizard .wizard-menu-item {
+main .form .wizard .wizard-menu-item {
   counter-increment: wizard-step-counter;
 }
 
-main .form form .wizard .wizard-menu-item::before {
+main .form .wizard .wizard-menu-item::before {
   content: counter(wizard-step-counter);
   border: 2px solid var(--form-wizard-number-color);
   color: var(--form-wizard-number-color);
@@ -449,7 +449,7 @@ main .form form .wizard .wizard-menu-item::before {
   display: inline-block;
 }
 
-main .form form .wizard .wizard-menu-active-item::before{
+main .form .wizard .wizard-menu-active-item::before{
   border: 2px solid var(--form-wizard-number-color);
   background: var(--form-wizard-number-color);
   color: var(--background-color-primary);
@@ -463,11 +463,11 @@ main .form form .wizard .wizard-menu-active-item::before{
 }
 
 /* wizard title on left */
-main .form form .wizard.left{
+main .form .wizard.left{
   display: flex;
 }
 
-main .form form .wizard.left .wizard-menu-items{
+main .form .wizard.left .wizard-menu-items{
   flex-direction: column;
   width: 300px;
 }
@@ -478,30 +478,30 @@ main form .panel-wrapper {
   flex-direction: column;
 }
 
-main .form form .panel-wrapper{
+main .form .panel-wrapper{
   display: grid;
   grid-template-columns: repeat(var(--form-columns), minmax(0, 1fr));
   gap: var(--form-field-vert-gap) var(--form-field-horz-gap);
 }
 
-main .form form .repeat-wrapper{
+main .form .repeat-wrapper{
     display: grid;
     grid-template-columns: repeat(var(--form-columns), minmax(0, 1fr));
     gap: var(--form-field-vert-gap) var(--form-field-horz-gap);
 }
 
-main .form form .wizard.left .panel-wrapper{
+main .form .wizard.left .panel-wrapper{
   flex: 1;
 }
 
 @media (width >= 1200px) {
-    main .form form .form-textarea-wrapper,
-    main .form form .file-wrapper,
-    main .form form .panel-wrapper {
+    main .form .form-textarea-wrapper,
+    main .form .file-wrapper,
+    main .form .panel-wrapper {
         flex: 1 0 100%;
     }
 
-    main .form form .panel-wrapper {
+    main .form .panel-wrapper {
         flex-flow: row wrap;
         gap: 10px 15px;
     }
@@ -537,55 +537,55 @@ main .form .file-wrapper .file-drag-area {
 }
 
 /* grid css */
-main .form form .field-wrapper .field-description{
+main .form .field-wrapper .field-description{
   grid-column: span 12;
 }
 
-main .form form .field-wrapper.col-12 {
+main .form .field-wrapper.col-12 {
     grid-column: span 12;
 }
 
-main .form form .field-wrapper.col-11 {
+main .form .field-wrapper.col-11 {
     grid-column: span 11;
 }
 
-main .form form .field-wrapper.col-10 {
+main .form .field-wrapper.col-10 {
   grid-column: span 10;
 }
 
-main .form form .field-wrapper.col-9 {
+main .form .field-wrapper.col-9 {
     grid-column: span 9;
 }
 
-main .form form .field-wrapper.col-8 {
+main .form .field-wrapper.col-8 {
     grid-column: span 8;
 }
 
-main .form form .field-wrapper.col-7 {
+main .form .field-wrapper.col-7 {
     grid-column: span 7;
 }
 
-main .form form .field-wrapper.col-6 {
+main .form .field-wrapper.col-6 {
       grid-column: span 6;
 }
 
-main .form form .field-wrapper.col-5 {
+main .form .field-wrapper.col-5 {
       grid-column: span 5;
 }
 
-main .form form .field-wrapper.col-4 {
+main .form .field-wrapper.col-4 {
       grid-column: span 4;
 }
 
-main .form form .field-wrapper.col-3 {
+main .form .field-wrapper.col-3 {
       grid-column: span 3;
 }
 
-main .form form .field-wrapper.col-2 {
+main .form .field-wrapper.col-2 {
       grid-column: span 2;
 }
 
-main .form form .field-wrapper.col-1 {
+main .form .field-wrapper.col-1 {
     grid-column: span 1;
 }
 
@@ -599,11 +599,11 @@ main form .wizard > .current-wizard-step.panel-wrapper:last-of-type ~ .wizard-bu
     display: none;
 }
 
-main .form form:not(.edit-mode) .captcha-wrapper{
+main .form:not(.edit-mode) .captcha-wrapper{
     display: none ;
 }
 
-main .form form .horizontal {
+main .form .horizontal {
     display: flex;
     flex-direction: row;
     gap: inherit;
@@ -619,12 +619,12 @@ main .form .text-wrapper input {
   color: green;
 letter-spacing: 4px;
 }
-main .form form .number-wrapper input {
+main .form .number-wrapper input {
    letter-spacing: 2px;
    color: red;
 }
 
-main .form form .file-wrapper {
+main .form .file-wrapper {
   /* Add your styles here (e.g., border, padding) */
   border: 1px solid #ccc;
   padding: 15px;
@@ -633,12 +633,12 @@ main .form form .file-wrapper {
 color: Gray;
 }
 
-main .form form .field-invalid .field-description {
+main .form .field-invalid .field-description {
 color: var(--form-error-color);
 font-weight: 700;
 }
 
-main .form form .drop-down-wrapper {
+main .form .drop-down-wrapper {
   /* Wrapper styles */
   display: flex;
   flex-direction: column;
@@ -648,7 +648,7 @@ main .form form .drop-down-wrapper {
   max-width: 300px;
 }
 
-main .form form .drop-down-wrapper .field-label {
+main .form .drop-down-wrapper .field-label {
   /* Label styles */
   margin-bottom: 10px;
   font-size: 16px;
@@ -657,7 +657,7 @@ main .form form .drop-down-wrapper .field-label {
   text-transform: uppercase;
 }
 
-main .form form .drop-down-wrapper select {
+main .form .drop-down-wrapper select {
   /* Dropdown styles */
   width: 100%;
   padding: 12px;
@@ -678,14 +678,14 @@ main .form form .drop-down-wrapper select {
   overflow: hidden;
 }
 
-main .form form .drop-down-wrapper select:hover {
+main .form .drop-down-wrapper select:hover {
   /* Hover effect */
   background: linear-gradient(white, white) padding-box,
               linear-gradient(135deg, #a29bfe, #6c5ce7) border-box;
   box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
 }
 
-main .form form .drop-down-wrapper select:focus {
+main .form .drop-down-wrapper select:focus {
   /* Focus effect */
   background: linear-gradient(white, white) padding-box,
               linear-gradient(135deg, #a29bfe, #6c5ce7) border-box;
@@ -693,12 +693,12 @@ main .form form .drop-down-wrapper select:focus {
   animation: pulse 1.5s infinite;
 }
 
-main .form form .drop-down-wrapper select::-ms-expand {
+main .form .drop-down-wrapper select::-ms-expand {
   /* Hide default arrow for IE11 */
   display: none;
 }
 
-main .form form .drop-down-wrapper::after {
+main .form .drop-down-wrapper::after {
   /* Custom arrow */
   content: "\25BC";
   font-size: 14px;
@@ -711,7 +711,7 @@ main .form form .drop-down-wrapper::after {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-main .form form .drop-down-wrapper select:focus + .dropdown-arrow {
+main .form .drop-down-wrapper select:focus + .dropdown-arrow {
   /* Arrow animation on focus */
   transform: translateY(-50%) rotate(180deg);
   color: #a29bfe;
@@ -731,34 +731,34 @@ main .form form .drop-down-wrapper select:focus + .dropdown-arrow {
 }
 
 /* Colorful dropdown options */
-main .form form .drop-down-wrapper select option {
+main .form .drop-down-wrapper select option {
   padding: 10px;
   background-color: #f5f5f5;
   color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-main .form form .drop-down-wrapper select option:hover {
+main .form .drop-down-wrapper select option:hover {
   background-color: #6c5ce7;
   color: white;
 }
 
 /* Custom scrollbar for dropdown */
-main .form form .drop-down-wrapper select::-webkit-scrollbar {
+main .form .drop-down-wrapper select::-webkit-scrollbar {
   width: 8px;
 }
 
-main .form form .drop-down-wrapper select::-webkit-scrollbar-track {
+main .form .drop-down-wrapper select::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 4px;
 }
 
-main .form form .drop-down-wrapper select::-webkit-scrollbar-thumb {
+main .form .drop-down-wrapper select::-webkit-scrollbar-thumb {
   background: #6c5ce7;
   border-radius: 4px;
 }
 
-main .form form .drop-down-wrapper select::-webkit-scrollbar-thumb:hover {
+main .form .drop-down-wrapper select::-webkit-scrollbar-thumb:hover {
   background: #a29bfe;
 }
 
@@ -770,7 +770,7 @@ main .form form .drop-down-wrapper select::-webkit-scrollbar-thumb:hover {
   }
 }
 
-main .form form .drop-down-wrapper select:active::after {
+main .form .drop-down-wrapper select:active::after {
   content: "";
   position: absolute;
   top: 50%;
