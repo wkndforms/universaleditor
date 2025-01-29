@@ -609,6 +609,9 @@ main .form form .horizontal {
     gap: inherit;
 }
 
+
+/* Updated CSS by ajit */
+
 main .form form .text-wrapper input {
   border: 5px solid #ccc;
   padding: 8px;
@@ -621,11 +624,21 @@ main .form form .number-wrapper input {
    color: red;
 }
 
+main .form form .file-wrapper {
+  /* Add your styles here (e.g., border, padding) */
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+color: Gray;
+}
+
+
 main .form form .drop-down-wrapper {
   /* Wrapper styles */
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   position: relative;
   width: 100%;
   max-width: 300px;
@@ -633,10 +646,11 @@ main .form form .drop-down-wrapper {
 
 main .form form .drop-down-wrapper .field-label {
   /* Label styles */
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 16px;
-  color: #333;
+  color: #6c5ce7;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 main .form form .drop-down-wrapper select {
@@ -644,28 +658,35 @@ main .form form .drop-down-wrapper select {
   width: 100%;
   padding: 12px;
   font-size: 14px;
-  border: 2px solid #6c5ce7;
+  border: 2px solid transparent;
   border-radius: 8px;
   background-color: white;
   color: #333;
   cursor: pointer;
   outline: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #6c5ce7, #a29bfe) border-box;
+  position: relative;
+  overflow: hidden;
 }
 
 main .form form .drop-down-wrapper select:hover {
   /* Hover effect */
-  border-color: #a29bfe;
-  box-shadow: 0 0 8px rgba(108, 92, 231, 0.3);
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #a29bfe, #6c5ce7) border-box;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
 }
 
 main .form form .drop-down-wrapper select:focus {
   /* Focus effect */
-  border-color: #a29bfe;
-  box-shadow: 0 0 8px rgba(108, 92, 231, 0.3);
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #a29bfe, #6c5ce7) border-box;
+  box-shadow: 0 0 15px rgba(108, 92, 231, 0.7);
+  animation: pulse 1.5s infinite;
 }
 
 main .form form .drop-down-wrapper select::-ms-expand {
@@ -676,19 +697,90 @@ main .form form .drop-down-wrapper select::-ms-expand {
 main .form form .drop-down-wrapper::after {
   /* Custom arrow */
   content: "\25BC";
-  font-size: 12px;
+  font-size: 14px;
   color: #6c5ce7;
   position: absolute;
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 main .form form .drop-down-wrapper select:focus + .dropdown-arrow {
   /* Arrow animation on focus */
   transform: translateY(-50%) rotate(180deg);
+  color: #a29bfe;
 }
+
+/* Pulse animation for focus */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(108, 92, 231, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(108, 92, 231, 0);
+  }
+}
+
+/* Colorful dropdown options */
+main .form form .drop-down-wrapper select option {
+  padding: 10px;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main .form form .drop-down-wrapper select option:hover {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+/* Custom scrollbar for dropdown */
+main .form form .drop-down-wrapper select::-webkit-scrollbar {
+  width: 8px;
+}
+
+main .form form .drop-down-wrapper select::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+main .form form .drop-down-wrapper select::-webkit-scrollbar-thumb {
+  background: #6c5ce7;
+  border-radius: 4px;
+}
+
+main .form form .drop-down-wrapper select::-webkit-scrollbar-thumb:hover {
+  background: #a29bfe;
+}
+
+/* Ripple effect on click */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+main .form form .drop-down-wrapper select:active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: rgba(108, 92, 231, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.6s linear;
+}
+
+
+
+
 
 
