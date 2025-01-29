@@ -614,3 +614,9 @@ name input {
     border-radius: 4px;
     color: red;
   }
+text-wrapper input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+    color: red;
+  }
