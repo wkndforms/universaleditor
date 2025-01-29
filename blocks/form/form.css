@@ -622,42 +622,73 @@ main .form form .number-wrapper input {
 }
 
 main .form form .drop-down-wrapper {
-  /* Add your styles here */
+  /* Wrapper styles */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
 }
 
 main .form form .drop-down-wrapper .field-label {
-  margin-bottom: 5px;
+  /* Label styles */
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #333;
   font-weight: bold;
 }
 
 main .form form .drop-down-wrapper select {
-  border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
-  background-color: #ffb6c1; /* Ensure a consistent background */
-  /* Adjust arrow appearance as needed */
+  /* Dropdown styles */
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 2px solid #6c5ce7;
+  border-radius: 8px;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
 
-main .form form .drop-down-wrapper select::-ms-expand {
-  display: none; /* Hide the default arrow for IE11 */
+main .form form .drop-down-wrapper select:hover {
+  /* Hover effect */
+  border-color: #a29bfe;
+  box-shadow: 0 0 8px rgba(108, 92, 231, 0.3);
 }
 
-main .form form .drop-down-wrapper select::after {
+main .form form .drop-down-wrapper select:focus {
+  /* Focus effect */
+  border-color: #a29bfe;
+  box-shadow: 0 0 8px rgba(108, 92, 231, 0.3);
+}
+
+main .form form .drop-down-wrapper select::-ms-expand {
+  /* Hide default arrow for IE11 */
+  display: none;
+}
+
+main .form form .drop-down-wrapper::after {
+  /* Custom arrow */
   content: "\25BC";
   font-size: 12px;
-  color: #ccc;
-  /* Adjust positioning as needed */
+  color: #6c5ce7;
   position: absolute;
-  right: 10px;
+  right: 12px;
   top: 50%;
   transform: translateY(-50%);
+  pointer-events: none;
+  transition: transform 0.3s ease;
 }
 
+main .form form .drop-down-wrapper select:focus + .dropdown-arrow {
+  /* Arrow animation on focus */
+  transform: translateY(-50%) rotate(180deg);
+}
 
 
