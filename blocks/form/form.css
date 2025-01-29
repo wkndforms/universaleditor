@@ -620,4 +620,8 @@ name input {
   padding: 8px;
   border-radius: 4px;
 }
+main .form form .number-wrapper input {
+   letter-spacing: 2px;
+   color: red;
+}
 
