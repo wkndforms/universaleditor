@@ -609,12 +609,6 @@ main .form form .horizontal {
     gap: inherit;
 }
 
-text-wrapper input {
-  border: 1px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
-}
-
 main .form form .text-wrapper input {
   border: 5px solid #ccc;
   padding: 8px;
@@ -626,9 +620,44 @@ main .form form .number-wrapper input {
    letter-spacing: 2px;
    color: red;
 }
-main .form form .drop-down-wrapper input {
-  position: relative;
-  display: inline-block;
+
+main .form form .drop-down-wrapper {
+  /* Add your styles here */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
+
+main .form form .drop-down-wrapper .field-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+main .form form .drop-down-wrapper select {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white; /* Ensure a consistent background */
+  /* Adjust arrow appearance as needed */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+main .form form .drop-down-wrapper select::-ms-expand {
+  display: none; /* Hide the default arrow for IE11 */
+}
+
+main .form form .drop-down-wrapper select::after {
+  content: "\25BC";
+  font-size: 12px;
+  color: #ccc;
+  /* Adjust positioning as needed */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 
