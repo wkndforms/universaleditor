@@ -624,7 +624,7 @@ main .form form .number-wrapper input {
 main .form form .drop-down-wrapper {
   /* Add your styles here */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-bottom: 15px;
 }
 
