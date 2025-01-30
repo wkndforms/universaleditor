@@ -639,7 +639,6 @@ font-weight: 700;
 }
 
 main .form form .drop-down-wrapper {
-  /* Wrapper styles */
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -649,7 +648,6 @@ main .form form .drop-down-wrapper {
 }
 
 main .form form .drop-down-wrapper .field-label {
-  /* Label styles */
   margin-bottom: 10px;
   font-size: 16px;
   color: #6c5ce7;
@@ -658,7 +656,6 @@ main .form form .drop-down-wrapper .field-label {
 }
 
 main .form form .drop-down-wrapper select {
-  /* Dropdown styles */
   width: 100%;
   padding: 12px;
   font-size: 14px;
@@ -679,14 +676,12 @@ main .form form .drop-down-wrapper select {
 }
 
 main .form form .drop-down-wrapper select:hover {
-  /* Hover effect */
   background: linear-gradient(white, white) padding-box,
               linear-gradient(135deg, #a29bfe, #6c5ce7) border-box;
   box-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
 }
 
 main .form form .drop-down-wrapper select:focus {
-  /* Focus effect */
   background: linear-gradient(white, white) padding-box,
               linear-gradient(135deg, #a29bfe, #6c5ce7) border-box;
   box-shadow: 0 0 15px rgba(108, 92, 231, 0.7);
@@ -694,12 +689,10 @@ main .form form .drop-down-wrapper select:focus {
 }
 
 main .form form .drop-down-wrapper select::-ms-expand {
-  /* Hide default arrow for IE11 */
   display: none;
 }
 
 main .form form .drop-down-wrapper::after {
-  /* Custom arrow */
   content: "\25BC";
   font-size: 14px;
   color: #6c5ce7;
@@ -712,12 +705,10 @@ main .form form .drop-down-wrapper::after {
 }
 
 main .form form .drop-down-wrapper select:focus + .dropdown-arrow {
-  /* Arrow animation on focus */
   transform: translateY(-50%) rotate(180deg);
   color: #a29bfe;
 }
 
-/* Pulse animation for focus */
 @keyframes pulse {
   0% {
     box-shadow: 0 0 0 0 rgba(108, 92, 231, 0.4);
@@ -730,7 +721,6 @@ main .form form .drop-down-wrapper select:focus + .dropdown-arrow {
   }
 }
 
-/* Colorful dropdown options */
 main .form form .drop-down-wrapper select option {
   padding: 10px;
   background-color: #f5f5f5;
@@ -743,7 +733,6 @@ main .form form .drop-down-wrapper select option:hover {
   color: white;
 }
 
-/* Custom scrollbar for dropdown */
 main .form form .drop-down-wrapper select::-webkit-scrollbar {
   width: 8px;
 }
@@ -762,7 +751,6 @@ main .form form .drop-down-wrapper select::-webkit-scrollbar-thumb:hover {
   background: #a29bfe;
 }
 
-/* Ripple effect on click */
 @keyframes ripple {
   to {
     transform: scale(4);
