@@ -612,30 +612,127 @@ main .form form .horizontal {
 
 /* Updated CSS by ajit */
 
+/* Text Input */
 main .form .text-wrapper input {
-  border: 5px solid #ccc;
-  padding: 8px;
-  border-radius: 4px;
-  color: green;
-letter-spacing: 4px;
-}
-main .form form .number-wrapper input {
-   letter-spacing: 2px;
-   color: red;
+  border: 2px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #333;
+  letter-spacing: 2px;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-main .form form .file-wrapper {
-  /* Add your styles here (e.g., border, padding) */
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 4px;
+main .form .text-wrapper input:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Telephone Input */
+main .form .telephone-wrapper input {
+  border: 2px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #333;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+main .form .telephone-wrapper input:focus {
+  border-color: #2196f3;
+  outline: none;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+/* Number Input */
+main .form .number-wrapper input {
+  border: 2px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #333;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+main .form .number-wrapper input:focus {
+  border-color: #f44336;
+  outline: none;
+  box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
+}
+
+/* Email Input */
+main .form .email-wrapper input {
+  border: 2px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #333;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+main .form .email-wrapper input:focus {
+  border-color: #ff9800;
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+}
+
+/* Address Field Input */
+main .form .address-wrapper input {
+  border: 2px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #333;
+  letter-spacing: 1.5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+main .form .address-wrapper input:focus {
+  border-color: #8e24aa;
+  outline: none;
+  box-shadow: 0 0 5px rgba(142, 36, 170, 0.5);
+}
+
+/* File Attachment */
+main .form .file-wrapper {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  border-radius: 8px;
   margin-bottom: 20px;
-color: Gray;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
 }
 
+main .form .file-wrapper:hover {
+  background-color: #e8f5e9;
+  border-color: #4caf50;
+}
+
+main .form .file-wrapper input[type="file"] {
+  display: none;
+}
+
+main .form .file-wrapper label {
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+main .form .file-wrapper label:hover {
+  color: #4caf50;
+}
+
+/* Error Handling */
 main .form form .field-invalid .field-description {
-color: var(--form-error-color);
-font-weight: 700;
+  color: #f44336;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 main .form form .drop-down-wrapper {
