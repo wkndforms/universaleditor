@@ -782,3 +782,77 @@ main .form form .drop-down-wrapper select:active::after {
   transform: translate(-50%, -50%) scale(0);
   animation: ripple 0.6s linear;
 }
+
+/* Base styles for the radio group */
+main .form form .radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Style for each radio item */
+main .form form .radio-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Hide the default radio button */
+main .form form .radio-item input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Custom radio button */
+main .form form .radio-custom {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007BFF;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for the custom radio button */
+main .form form .radio-item:hover .radio-custom {
+  border-color: #0056b3;
+  background-color: #f0f8ff;
+}
+
+/* Focus effect for the custom radio button */
+main .form form main .form form .radio-item input[type="radio"]:focus + .radio-custom {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+
+/* Checked state for the custom radio button */
+main .form form .radio-item input[type="radio"]:checked + .radio-custom {
+  border-color: #007BFF;
+  background-color: #007BFF;
+}
+
+/* Inner dot for the checked state */
+main .form form .radio-item input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Disabled state for the radio button */
+main .form form .radio-item input[type="radio"]:disabled + .radio-custom {
+  border-color: #ccc;
+  background-color: #f9f9f9;
+}
+
+main .form form .radio-item input[type="radio"]:disabled + .radio-custom::after {
+  background-color: #ccc;
+}
