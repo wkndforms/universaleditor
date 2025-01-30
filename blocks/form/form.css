@@ -612,89 +612,100 @@ main .form form .horizontal {
 
 /* Updated CSS by ajit */
 
-/* Text Input */
-main .form .text-wrapper input {
+/* General form styles */
+main .form input {
   border: 2px solid #ccc;
   padding: 10px 15px;
   border-radius: 8px;
   color: #333;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
   font-size: 16px;
   transition: all 0.3s ease;
+  position: relative;
+  background-color: #f9f9f9;
+}
+
+/* Text Input */
+main .form .text-wrapper input {
+  box-shadow: 0 0 8px rgba(0, 128, 0, 0.3);
 }
 
 main .form .text-wrapper input:focus {
   border-color: #4caf50;
   outline: none;
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.7), 0 0 20px rgba(76, 175, 80, 0.3);
 }
 
 /* Telephone Input */
 main .form .telephone-wrapper input {
-  border: 2px solid #ccc;
-  padding: 10px 15px;
-  border-radius: 8px;
-  color: #333;
-  letter-spacing: 1.5px;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
 }
 
 main .form .telephone-wrapper input:focus {
   border-color: #2196f3;
   outline: none;
-  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+  box-shadow: 0 0 10px rgba(33, 150, 243, 0.7), 0 0 20px rgba(33, 150, 243, 0.3);
 }
 
 /* Number Input */
 main .form .number-wrapper input {
-  border: 2px solid #ccc;
-  padding: 10px 15px;
-  border-radius: 8px;
-  color: #333;
-  letter-spacing: 1.5px;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(244, 67, 54, 0.3);
 }
 
 main .form .number-wrapper input:focus {
   border-color: #f44336;
   outline: none;
-  box-shadow: 0 0 5px rgba(244, 67, 54, 0.5);
+  box-shadow: 0 0 10px rgba(244, 67, 54, 0.7), 0 0 20px rgba(244, 67, 54, 0.3);
 }
 
 /* Email Input */
 main .form .email-wrapper input {
-  border: 2px solid #ccc;
-  padding: 10px 15px;
-  border-radius: 8px;
-  color: #333;
-  letter-spacing: 1.5px;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(255, 152, 0, 0.3);
 }
 
 main .form .email-wrapper input:focus {
   border-color: #ff9800;
   outline: none;
-  box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.7), 0 0 20px rgba(255, 152, 0, 0.3);
 }
 
 /* Address Field Input */
 main .form .address-wrapper input {
-  border: 2px solid #ccc;
-  padding: 10px 15px;
-  border-radius: 8px;
-  color: #333;
-  letter-spacing: 1.5px;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(142, 36, 170, 0.3);
 }
 
 main .form .address-wrapper input:focus {
   border-color: #8e24aa;
   outline: none;
-  box-shadow: 0 0 5px rgba(142, 36, 170, 0.5);
+  box-shadow: 0 0 10px rgba(142, 36, 170, 0.7), 0 0 20px rgba(142, 36, 170, 0.3);
+}
+
+/* Floating Label */
+main .form .input-wrapper {
+  position: relative;
+}
+
+main .form .input-wrapper input {
+  padding-top: 20px;
+}
+
+main .form .input-wrapper label {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+  font-size: 16px;
+  color: #888;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Floating Label on Focus */
+main .form .input-wrapper input:focus + label,
+main .form .input-wrapper input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 12px;
+  color: #4caf50;
 }
 
 /* File Attachment */
@@ -705,6 +716,8 @@ main .form .file-wrapper {
   margin-bottom: 20px;
   background-color: #f5f5f5;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 main .form .file-wrapper:hover {
@@ -728,12 +741,35 @@ main .form .file-wrapper label:hover {
   color: #4caf50;
 }
 
+/* Sparkle Animation for Input Fields */
+@keyframes sparkle {
+  0% {
+    box-shadow: 0 0 0px rgba(76, 175, 80, 0.5), 0 0 10px rgba(76, 175, 80, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.8), 0 0 15px rgba(76, 175, 80, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0px rgba(76, 175, 80, 0.5), 0 0 10px rgba(76, 175, 80, 0.3);
+  }
+}
+
+main .form .text-wrapper input,
+main .form .telephone-wrapper input,
+main .form .number-wrapper input,
+main .form .email-wrapper input,
+main .form .address-wrapper input {
+  animation: sparkle 1.5s infinite alternate;
+}
+
 /* Error Handling */
 main .form form .field-invalid .field-description {
   color: #f44336;
   font-weight: 700;
   font-size: 14px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
+
 
 main .form form .drop-down-wrapper {
   display: flex;
