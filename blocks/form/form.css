@@ -844,13 +844,13 @@ input {
 }
 
 /* Checkbox Styling */
-.checkbox-wrapper {
+main .form form .checkbox-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 10px; /* Space between checkboxes */
 }
 
-.checkbox-wrapper input[type="checkbox"] {
+main .form form .checkbox-wrapper input[type="checkbox"] {
   cursor: pointer;
   position: relative;
   width: 20px;
@@ -861,12 +861,12 @@ input {
   margin-right: 10px;
 }
 
-.checkbox-wrapper input[type="checkbox"]:checked {
+main .form form .checkbox-wrapper input[type="checkbox"]:checked {
   background-color: #4caf50;
   border-color: #4caf50;
 }
 
-.checkbox-wrapper input[type="checkbox"]:checked::after {
+main .form form .checkbox-wrapper input[type="checkbox"]:checked::after {
   content: '\2714'; /* Checkmark */
   font-size: 16px;
   color: white;
@@ -875,10 +875,11 @@ input {
   left: 4px;
 }
 
-.checkbox-wrapper label {
+main .form form .checkbox-wrapper label {
   font-size: 16px;
   color: #333;
 }
+
 /* Targets radio group wrappers */
 .radio-group-wrapper {
   margin-bottom: 20px; /* Adds space between radio groups */
