@@ -913,3 +913,53 @@ main .form form .radio-item input[type="radio"]:disabled + .radio-group-wrapper 
 main .form form .radio-item input[type="radio"]:disabled + .radio-group-wrapper::after {
   background-color: #ccc;
 }
+
+/*ADDING CHECKBOX GROUP*/
+
+:root {
+  --checkbox-group-margin: 20px; /* Default margin */
+}
+
+/* Base styles */
+.checkbox-group-wrapper {
+  margin-bottom: var(--checkbox-group-margin);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Spacing between checkboxes */
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .checkbox-group-wrapper {
+    --checkbox-group-margin: 15px;
+    flex-direction: column; /* Stack checkboxes vertically on smaller screens */
+    gap: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-group-wrapper {
+    --checkbox-group-margin: 10px;
+    gap: 3px;
+  }
+}
+
+/* Hover effect */
+.checkbox-group-wrapper:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Checkbox styling */
+.checkbox-group-wrapper input[type="checkbox"] {
+  accent-color: #007bff; /* Customize checkbox color */
+  transform: scale(1.2); /* Make checkboxes slightly larger */
+  transition: transform 0.2s ease-in-out;
+}
+
+.checkbox-group-wrapper input[type="checkbox"]:hover {
+  transform: scale(1.3);
+}
+
+
