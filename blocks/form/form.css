@@ -611,9 +611,8 @@ main .form form .horizontal {
 
 
 /* Updated CSS by ajit */
-
-/* General form styles */
-main .form input {
+/* General input field styles */
+input {
   border: 2px solid #ccc;
   padding: 10px 15px;
   border-radius: 8px;
@@ -626,70 +625,70 @@ main .form input {
 }
 
 /* Text Input */
-main .form .text-wrapper input {
+.text-wrapper input {
   box-shadow: 0 0 8px rgba(0, 128, 0, 0.3);
 }
 
-main .form .text-wrapper input:focus {
+.text-wrapper input:focus {
   border-color: #4caf50;
   outline: none;
   box-shadow: 0 0 10px rgba(76, 175, 80, 0.7), 0 0 20px rgba(76, 175, 80, 0.3);
 }
 
 /* Telephone Input */
-main .form .telephone-wrapper input {
+.telephone-wrapper input {
   box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
 }
 
-main .form .telephone-wrapper input:focus {
+.telephone-wrapper input:focus {
   border-color: #2196f3;
   outline: none;
   box-shadow: 0 0 10px rgba(33, 150, 243, 0.7), 0 0 20px rgba(33, 150, 243, 0.3);
 }
 
 /* Number Input */
-main .form .number-wrapper input {
+.number-wrapper input {
   box-shadow: 0 0 8px rgba(244, 67, 54, 0.3);
 }
 
-main .form .number-wrapper input:focus {
+.number-wrapper input:focus {
   border-color: #f44336;
   outline: none;
   box-shadow: 0 0 10px rgba(244, 67, 54, 0.7), 0 0 20px rgba(244, 67, 54, 0.3);
 }
 
 /* Email Input */
-main .form .email-wrapper input {
+.email-wrapper input {
   box-shadow: 0 0 8px rgba(255, 152, 0, 0.3);
 }
 
-main .form .email-wrapper input:focus {
+.email-wrapper input:focus {
   border-color: #ff9800;
   outline: none;
   box-shadow: 0 0 10px rgba(255, 152, 0, 0.7), 0 0 20px rgba(255, 152, 0, 0.3);
 }
 
 /* Address Field Input */
-main .form .address-wrapper input {
+.address-wrapper input {
   box-shadow: 0 0 8px rgba(142, 36, 170, 0.3);
 }
 
-main .form .address-wrapper input:focus {
+.address-wrapper input:focus {
   border-color: #8e24aa;
   outline: none;
   box-shadow: 0 0 10px rgba(142, 36, 170, 0.7), 0 0 20px rgba(142, 36, 170, 0.3);
 }
 
 /* Floating Label */
-main .form .input-wrapper {
+.input-wrapper {
   position: relative;
 }
 
-main .form .input-wrapper input {
+.input-wrapper input {
   padding-top: 20px;
 }
 
-main .form .input-wrapper label {
+.input-wrapper label {
   position: absolute;
   top: 12px;
   left: 15px;
@@ -700,8 +699,8 @@ main .form .input-wrapper label {
 }
 
 /* Floating Label on Focus */
-main .form .input-wrapper input:focus + label,
-main .form .input-wrapper input:not(:placeholder-shown) + label {
+.input-wrapper input:focus + label,
+.input-wrapper input:not(:placeholder-shown) + label {
   top: -10px;
   left: 10px;
   font-size: 12px;
@@ -709,7 +708,7 @@ main .form .input-wrapper input:not(:placeholder-shown) + label {
 }
 
 /* File Attachment */
-main .form .file-wrapper {
+.file-wrapper {
   border: 2px dashed #ccc;
   padding: 20px;
   border-radius: 8px;
@@ -720,16 +719,16 @@ main .form .file-wrapper {
   overflow: hidden;
 }
 
-main .form .file-wrapper:hover {
+.file-wrapper:hover {
   background-color: #e8f5e9;
   border-color: #4caf50;
 }
 
-main .form .file-wrapper input[type="file"] {
+.file-wrapper input[type="file"] {
   display: none;
 }
 
-main .form .file-wrapper label {
+.file-wrapper label {
   color: #333;
   font-size: 16px;
   cursor: pointer;
@@ -737,7 +736,7 @@ main .form .file-wrapper label {
   transition: color 0.3s ease;
 }
 
-main .form .file-wrapper label:hover {
+.file-wrapper label:hover {
   color: #4caf50;
 }
 
@@ -754,16 +753,16 @@ main .form .file-wrapper label:hover {
   }
 }
 
-main .form .text-wrapper input,
-main .form .telephone-wrapper input,
-main .form .number-wrapper input,
-main .form .email-wrapper input,
-main .form .address-wrapper input {
+.text-wrapper input,
+.telephone-wrapper input,
+.number-wrapper input,
+.email-wrapper input,
+.address-wrapper input {
   animation: sparkle 1.5s infinite alternate;
 }
 
 /* Error Handling */
-main .form form .field-invalid .field-description {
+.field-invalid .field-description {
   color: #f44336;
   font-weight: 700;
   font-size: 14px;
@@ -838,135 +837,5 @@ main .form form .field-invalid .field-description {
   transform: translateY(-50%) rotate(180deg);
 }
 
-@keyframes backgroundShift {
-  0% { background: linear-gradient(45deg, #ff5733, #ffbd33); }
-  50% { background: linear-gradient(45deg, #33ff57, #33a8ff); }
-  100% { background: linear-gradient(45deg, #ff5733, #33a8ff); }
-}
+/* Additional keyframes and styles here */
 
-@keyframes colorShift {
-  0% { color: #ff5733; }
-  50% { color: #ffbd33; }
-  100% { color: #33a8ff; }
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 87, 51, 0.4); }
-  70% { box-shadow: 0 0 0 10px rgba(255, 87, 51, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 87, 51, 0); }
-}
-
-@keyframes floatLeftRight {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(50px); }
-  100% { transform: translateX(0); }
-}
-
-main .form form .radio-group-wrapper {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #007BFF;
-  border-radius: 50%;
-  margin-right: 10px;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-/* Hover effect for the custom radio button */
-main .form form .radio-item:hover .radio-group-wrapper {
-  border-color: #0056b3;
-  background-color: #f0f8ff;
-}
-
-/* Focus effect for the custom radio button */
-main .form form .radio-item input[type="radio"]:focus + .radio-group-wrapper {
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
-}
-
-/* Checked state for the custom radio button */
-main .form form .radio-item input[type="radio"]:checked + .radio-group-wrapper {
-  border-color: #007BFF;
-  background-color: #007BFF;
-}
-
-/* Inner dot for the checked state */
-main .form form .radio-item input[type="radio"]:checked + .radio-group-wrapper::after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Disabled state for the radio button */
-main .form form .radio-item input[type="radio"]:disabled + .radio-group-wrapper {
-  border-color: #ccc;
-  background-color: #f9f9f9;
-}
-
-main .form form .radio-item input[type="radio"]:disabled + .radio-group-wrapper::after {
-  background-color: #ccc;
-}
-
-/*ADDING CHECKBOX GROUP*/
-main .form form .checkbox-group-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px; /* Adds space between checkbox groups */
-  position: relative;
-  padding: 10px;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #ff5733, #ffbd33, #33ff57, #33a8ff);
-  animation: floatLeftRight 6s infinite linear;
-  transition: all 0.3s ease-in-out;
-}
-
-main .form form .checkbox-group-wrapper:hover {
-  animation-play-state: paused;
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(255, 87, 51, 0.7);
-}
-
-main .form form .checkbox-group-wrapper .checkbox-label {
-  font-size: 16px;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  animation: colorShift 3s infinite alternate;
-}
-
-main .form form .checkbox-group-wrapper input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: #ff5733;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-main .form form .checkbox-group-wrapper input[type="checkbox"]:checked {
-  box-shadow: 0 0 10px rgba(255, 87, 51, 0.8);
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes colorShift {
-  0% { color: #ff5733; }
-  50% { color: #ffbd33; }
-  100% { color: #33a8ff; }
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(255, 87, 51, 0.4); }
-  70% { box-shadow: 0 0 0 10px rgba(255, 87, 51, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(255, 87, 51, 0); }
-}
-
-@keyframes floatLeftRight {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(50px); }
-  100% { transform: translateX(0); }
-}
