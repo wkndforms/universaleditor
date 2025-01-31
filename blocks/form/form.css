@@ -839,18 +839,18 @@ input {
 
 /* Additional keyframes and styles here */
 /* Targets checkbox group wrappers */
-.checkbox-group-wrapper {
+main .form form .checkbox-group-wrapper {
   margin-bottom: 20px; /* Adds space between checkbox groups */
 }
 
 /* Checkbox Styling */
-main .form form .checkbox-wrapper {
+main .form form .checkbox-group-wrapper .checkbox-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 10px; /* Space between checkboxes */
 }
 
-main .form form .checkbox-wrapper input[type="checkbox"] {
+main .form form .checkbox-group-wrapper .checkbox-wrapper input[type="checkbox"] {
   cursor: pointer;
   position: relative;
   width: 20px;
@@ -861,12 +861,12 @@ main .form form .checkbox-wrapper input[type="checkbox"] {
   margin-right: 10px;
 }
 
-main .form form .checkbox-wrapper input[type="checkbox"]:checked {
+main .form form .checkbox-group-wrapper .checkbox-wrapper input[type="checkbox"]:checked {
   background-color: #4caf50;
   border-color: #4caf50;
 }
 
-main .form form .checkbox-wrapper input[type="checkbox"]:checked::after {
+main .form form .checkbox-group-wrapper .checkbox-wrapper input[type="checkbox"]:checked::after {
   content: '\2714'; /* Checkmark */
   font-size: 16px;
   color: white;
@@ -875,24 +875,24 @@ main .form form .checkbox-wrapper input[type="checkbox"]:checked::after {
   left: 4px;
 }
 
-main .form form .checkbox-wrapper label {
+main .form form .checkbox-group-wrapper .checkbox-wrapper label {
   font-size: 16px;
   color: #333;
 }
 
 /* Targets radio group wrappers */
-.radio-group-wrapper {
+main .form form .radio-group-wrapper {
   margin-bottom: 20px; /* Adds space between radio groups */
 }
 
 /* Radio Button Styling */
-main .form form .radio-wrapper {
+main .form form .radio-group-wrapper .radio-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 10px; /* Space between radio buttons */
 }
 
-main .form form .radio-wrapper input[type="radio"] {
+main .form form .radio-group-wrapper .radio-wrapper input[type="radio"] {
   cursor: pointer;
   position: relative;
   width: 20px;
@@ -903,12 +903,12 @@ main .form form .radio-wrapper input[type="radio"] {
   margin-right: 10px;
 }
 
-main .form form .radio-wrapper input[type="radio"]:checked {
+main .form form .radio-group-wrapper .radio-wrapper input[type="radio"]:checked {
   background-color: #2196f3;
   border-color: #2196f3;
 }
 
-main .form form .radio-wrapper input[type="radio"]:checked::after {
+main .form form .radio-group-wrapper .radio-wrapper input[type="radio"]:checked::after {
   content: '\2022'; /* Filled circle */
   font-size: 16px;
   color: white;
@@ -917,9 +917,7 @@ main .form form .radio-wrapper input[type="radio"]:checked::after {
   left: 4px;
 }
 
-main .form form .radio-wrapper label {
+main .form form .radio-group-wrapper .radio-wrapper label {
   font-size: 16px;
   color: #333;
 }
-
-
