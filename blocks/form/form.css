@@ -770,8 +770,7 @@ main .form form .field-invalid .field-description {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-
-main .form form .drop-down-wrapper {
+.drop-down-wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -781,11 +780,11 @@ main .form form .drop-down-wrapper {
   animation: floatLeftRight 6s infinite linear;
 }
 
-main .form form .drop-down-wrapper:hover {
+.drop-down-wrapper:hover {
   animation-play-state: paused;
 }
 
-main .form form .drop-down-wrapper .field-label {
+.drop-down-wrapper .field-label {
   margin-bottom: 10px;
   font-size: 16px;
   color: #ff5733;
@@ -794,7 +793,7 @@ main .form form .drop-down-wrapper .field-label {
   animation: colorShift 3s infinite alternate;
 }
 
-main .form form .drop-down-wrapper select {
+.drop-down-wrapper select {
   width: 100%;
   padding: 12px;
   font-size: 14px;
@@ -813,17 +812,17 @@ main .form form .drop-down-wrapper select {
   animation: backgroundShift 5s infinite alternate;
 }
 
-main .form form .drop-down-wrapper select:hover {
+.drop-down-wrapper select:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(255, 87, 51, 0.7);
 }
 
-main .form form .drop-down-wrapper select:focus {
+.drop-down-wrapper select:focus {
   box-shadow: 0 0 20px rgba(255, 87, 51, 0.9);
   animation: pulse 1.5s infinite;
 }
 
-main .form form .drop-down-wrapper::after {
+.drop-down-wrapper::after {
   content: "\25BC";
   font-size: 14px;
   color: #fff;
@@ -835,7 +834,7 @@ main .form form .drop-down-wrapper::after {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-main .form form .drop-down-wrapper select:focus + .dropdown-arrow {
+.drop-down-wrapper select:focus + .dropdown-arrow {
   transform: translateY(-50%) rotate(180deg);
 }
 
@@ -862,7 +861,6 @@ main .form form .drop-down-wrapper select:focus + .dropdown-arrow {
   50% { transform: translateX(50px); }
   100% { transform: translateX(0); }
 }
-
 
 main .form form .radio-group-wrapper {
   width: 20px;
