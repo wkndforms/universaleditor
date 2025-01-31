@@ -886,13 +886,13 @@ main .form form .checkbox-wrapper label {
 }
 
 /* Radio Button Styling */
-.radio-wrapper {
+main .form form .radio-wrapper {
   display: flex;
   align-items: center;
   margin-bottom: 10px; /* Space between radio buttons */
 }
 
-.radio-wrapper input[type="radio"] {
+main .form form .radio-wrapper input[type="radio"] {
   cursor: pointer;
   position: relative;
   width: 20px;
@@ -903,12 +903,12 @@ main .form form .checkbox-wrapper label {
   margin-right: 10px;
 }
 
-.radio-wrapper input[type="radio"]:checked {
+main .form form .radio-wrapper input[type="radio"]:checked {
   background-color: #2196f3;
   border-color: #2196f3;
 }
 
-.radio-wrapper input[type="radio"]:checked::after {
+main .form form .radio-wrapper input[type="radio"]:checked::after {
   content: '\2022'; /* Filled circle */
   font-size: 16px;
   color: white;
@@ -917,7 +917,7 @@ main .form form .checkbox-wrapper label {
   left: 4px;
 }
 
-.radio-wrapper label {
+main .form form .radio-wrapper label {
   font-size: 16px;
   color: #333;
 }
