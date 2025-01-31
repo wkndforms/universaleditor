@@ -915,7 +915,7 @@ main .form form .radio-item input[type="radio"]:disabled + .radio-group-wrapper:
 }
 
 /*ADDING CHECKBOX GROUP*/
-.checkbox-group-wrapper {
+main .form form .checkbox-group-wrapper {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px; /* Adds space between checkbox groups */
@@ -927,13 +927,13 @@ main .form form .radio-item input[type="radio"]:disabled + .radio-group-wrapper:
   transition: all 0.3s ease-in-out;
 }
 
-.checkbox-group-wrapper:hover {
+main .form form .checkbox-group-wrapper:hover {
   animation-play-state: paused;
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(255, 87, 51, 0.7);
 }
 
-.checkbox-group-wrapper .checkbox-label {
+main .form form .checkbox-group-wrapper .checkbox-label {
   font-size: 16px;
   color: white;
   font-weight: bold;
@@ -942,7 +942,7 @@ main .form form .radio-item input[type="radio"]:disabled + .radio-group-wrapper:
   animation: colorShift 3s infinite alternate;
 }
 
-.checkbox-group-wrapper input[type="checkbox"] {
+main .form form .checkbox-group-wrapper input[type="checkbox"] {
   width: 18px;
   height: 18px;
   accent-color: #ff5733;
@@ -950,7 +950,7 @@ main .form form .radio-item input[type="radio"]:disabled + .radio-group-wrapper:
   transition: all 0.3s ease-in-out;
 }
 
-.checkbox-group-wrapper input[type="checkbox"]:checked {
+main .form form .checkbox-group-wrapper input[type="checkbox"]:checked {
   box-shadow: 0 0 10px rgba(255, 87, 51, 0.8);
   animation: pulse 1.5s infinite;
 }
@@ -972,4 +972,3 @@ main .form form .radio-item input[type="radio"]:disabled + .radio-group-wrapper:
   50% { transform: translateX(50px); }
   100% { transform: translateX(0); }
 }
-
